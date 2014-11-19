@@ -11,14 +11,13 @@ block content
 						span Posted on #{entry.post.posted.toDateString()} at #{entry.post.posted.getHours()}:#{entry.post.posted.getMinutes()}
 			.panel-body
 				p!=entry.html
-	.panel.panel-default
-		#disqus-thread
-		script.
-			var disqus_shortname = 'malynin'; // required: replace example with your forum shortname
+				#disqus_thread
+				script.
+					var disqus_shortname = 'malynin'; // required: replace example with your forum shortname
 
-			(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
+					(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
 	
