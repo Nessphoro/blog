@@ -1,0 +1,14 @@
+extends ./layout.jade
+
+block content
+	each post in posts
+		.panel.panel-default
+			.panel-heading.post-heading
+				.row
+					.col-xs-12
+						a(href="/blog/"+post.id)!=post.title
+				.row
+					.col-xs-12
+						span Posted on #{post.posted.toDateString()} at #{post.posted.getHours()}:#{post.posted.getMinutes()}
+			.panel-body
+				p!=post.preview
