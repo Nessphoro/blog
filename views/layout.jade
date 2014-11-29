@@ -1,6 +1,6 @@
 html
 	head
-		title!= "hello"
+		title!= "Pavlo Malynin - " + title
 		
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 
@@ -22,15 +22,12 @@ html
 				.collapse.navbar-collapse.navbar-ex1-collapse
 					.collapse.navbar-collapse#coll
 						ul.nav.navbar-nav.navbar-right
-							li.active
-								a(href="/") Blog
-							li
-								a(href="/resume") Resume
-							li
-								a(href="/contact") Contact
+							each link in menu
+								li(class=link.active?"active":"")
+									a(href=link.url)=link.text
 							li
 								a(href="https://github.com/Nessphoro") GitHub
-		.skyline.hidden-xs
+		.skyline.hidden-xs.text-center
 			img(src="/img/skyline.jpg").img-responsive
 		.visible-xs
 			br

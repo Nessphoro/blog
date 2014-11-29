@@ -1,7 +1,10 @@
 Second Test Post
 ================
+<cut>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac mauris nunc. In sit amet euismod mi. Morbi sed dolor feugiat, rutrum enim eget, blandit lacus. Sed ac lectus sollicitudin, fermentum nisl sit amet, feugiat lacus. Integer mattis odio neque, sit amet venenatis lectus mollis a. Duis dignissim arcu id lectus vulputate aliquet. Sed rutrum rutrum auctor. Suspendisse potenti. Proin luctus in lacus a mattis. Cras malesuada sed libero vel rhoncus. Etiam commodo hendrerit laoreet. Fusce vulputate at nisl id commodo. Aenean eu nulla ut velit pulvinar blandit. Ut aliquet accumsan commodo.
+
+</cut>
 
 Aenean feugiat quis felis ut porta. Nullam risus neque, porta at ornare id, ultrices eget est. Ut eu ornare neque. Curabitur et nulla a elit maximus lacinia. Quisque faucibus elit ipsum, posuere blandit lorem blandit in. Quisque quis egestas ipsum, ac hendrerit diam. Praesent et elit lacus. Donec sit amet nulla cursus nunc egestas gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla consectetur arcu id tortor sagittis, bibendum efficitur dolor rutrum. Suspendisse nec purus quis urna dignissim scelerisque. Cras quis ex rutrum, vulputate neque nec, blandit orci.
 

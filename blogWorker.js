@@ -31,7 +31,16 @@ module.exports.getPost = function(id, callback)
 				else
 				{
 
-					var html=md.toHTML(data);
+					var tree=md.parse(data);
+					var renderTree = ['markdown']
+					for(var index=1; index<tree.length;index++)
+					{
+						if(tree[index][1]!="<cut>" && tree[index][1]!="</cut>")
+						{
+							renderTree.push(tree[index]);
+						}
+					}
+					var html = md.renderJsonML(md.toHTMLTree(renderTree));
 					cache.set(id, html);
 					entry.html = html;
 					callback(null,entry);
@@ -82,8 +91,8 @@ module.exports.init = function(settings)
 			}
 
 			var header = tree[1][2]; //Save the title
-
-			if(tree[2][0] != "para")
+			var previewTree=["markdown"];
+			if(tree[2][1] != "<cut>")
 			{
 			  	if(settings.logging == 'dev')
 				{
@@ -91,9 +100,20 @@ module.exports.init = function(settings)
 				}
 				return;
 			}
-			var firstParagraph = tree[2][1];
+			var searchIndex = 3;
+			while(true)
+			{
+				if(tree[searchIndex][1] != "</cut>")
+				{
+					previewTree.push(tree[searchIndex]);
+					searchIndex++;
+				}
+				else
+					break;
+			}
+			console.log(tree);
 			var vid = file.substr(0,file.length-3)
-			lookup[vid] = {id:vid,title:header,location:settings.location + file, preview:firstParagraph, posted: new Date(stats.ctime)};
+			lookup[vid] = {id:vid,title:header,location:settings.location + file, preview:md.renderJsonML(md.toHTMLTree(previewTree)), posted: new Date(stats.ctime)};
 			orderList.push(lookup[vid]);
 			
 		}
