@@ -1,6 +1,6 @@
 {
 	"port" : 8080,
-	"proxy" : false,
+	"proxy" : true,
 	"logging": "dev",
 	"location" : "blog/",
 	"cacheSizeMiB" : 256 
